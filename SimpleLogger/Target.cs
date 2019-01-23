@@ -50,8 +50,8 @@ namespace SimpleLogger
                 do
                 {
                     result = cache.TryDequeue(out object old);
+                    Write(old);
                 } while (!result);
-                Write(result);
             }
         }
 

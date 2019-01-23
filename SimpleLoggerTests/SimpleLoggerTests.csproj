@@ -53,6 +53,7 @@
     <Compile Include="LogManagerTests.cs" />
     <Compile Include="LogTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LogCacheTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleLogger\SimpleLogger.csproj">
