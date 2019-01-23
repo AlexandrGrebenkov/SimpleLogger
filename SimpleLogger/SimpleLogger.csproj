@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;net40</TargetFrameworks>
+    <TargetFrameworks>netstandard1.1;net40</TargetFrameworks>
     <Authors>Alexandr Grebenkov</Authors>
     <AssemblyName>SimpleLogger</AssemblyName>
     <RootNamespace>SimpleLogger</RootNamespace>
@@ -9,5 +9,11 @@
     <FileVersion>1.2.0.0</FileVersion>
     <Version>1.2.0</Version>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+    <PackageReference Include="package.mscorlib">
+      <Version>1.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>
