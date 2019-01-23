@@ -1,10 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SimpleLogger;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleLogger.Tests
 {
@@ -15,7 +11,7 @@ namespace SimpleLogger.Tests
         public void GetLogTest()
         {
             var targets = new List<Target>();
-            targets.Add(new Target { LogLevel = LogLevel.Trace, write = message => Console.WriteLine($"{DateTime.Now}: {message}") });
+            targets.Add(new Target(LogLevel.Trace, message => Console.WriteLine($"{DateTime.Now}: {message}")));
             LogManager.Init(targets);
 
             var log = LogManager.GetLog();
