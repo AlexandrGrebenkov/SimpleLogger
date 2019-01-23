@@ -1,0 +1,8 @@
+﻿v1.2
+23.01.2019
+
+Изменения:
+ - Multitarget (net40, netstandard1.1)
+ - Кэш сообщений
+Breaking changes:
+ - Конструктор для Target

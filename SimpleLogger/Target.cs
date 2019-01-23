@@ -25,6 +25,7 @@ namespace SimpleLogger
             TargetSettings = targetSettings ?? new TargetSettings();
         }
 
+        /// <summary>Кэш сообщений</summary>
         ConcurrentQueue<object> cache = new ConcurrentQueue<object>();
 
         void AddToCache(object obj)
@@ -55,9 +56,14 @@ namespace SimpleLogger
             }
         }
 
+        /// <summary>
+        /// Добавление сообщения в лог
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="level"></param>
         public void AddMessage(object obj, LogLevel level)
         {
-            var message = $"{DateTime.Now}: {level} - {obj}";
+            var message = $"{DateTime.Now:yyyy.MM.dd HH:mm:ss:FFF}: {level} - {obj}";
 
             if (TargetSettings.EnableCache && level <= TargetSettings.WriteCacheLevel) // Порог отображения записей кэша           
                 WriteCache();
