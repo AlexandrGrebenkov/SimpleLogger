@@ -11,7 +11,7 @@ namespace SimpleLogger.Tests
         public void GetLogTest()
         {
             var targets = new List<Target>();
-            targets.Add(new Target(LogLevel.Trace, message => Console.WriteLine($"{DateTime.Now}: {message}")));
+            targets.Add(new Target(LogLevel.Trace, message => Console.WriteLine(message)));
             LogManager.Init(targets);
 
             var log = LogManager.GetLog();

@@ -59,10 +59,10 @@ namespace SimpleLogger
         {
             var message = $"{DateTime.Now}: {level} - {obj}";
 
-            if (TargetSettings.EnableCache && level >= TargetSettings.WriteCacheLevel) // Порог отображения записей кэша           
+            if (TargetSettings.EnableCache && level <= TargetSettings.WriteCacheLevel) // Порог отображения записей кэша           
                 WriteCache();
 
-            if (level >= LogLevel)
+            if (level <= LogLevel)
                 Write(message);
             else
                 AddToCache(message);
