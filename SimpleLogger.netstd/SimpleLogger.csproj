@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.0;net40</TargetFrameworks>
+    <Authors>Alexandr Grebenkov</Authors>
+    <AssemblyName>SimpleLogger</AssemblyName>
+    <RootNamespace>SimpleLogger</RootNamespace>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2.0</Version>
+  </PropertyGroup>
+
+</Project>

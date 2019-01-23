@@ -54,12 +54,6 @@
     <Compile Include="LogTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SimpleLogger\SimpleLogger.csproj">
-      <Project>{E8179FC8-05FD-4F2B-A7AC-945696DA00D9}</Project>
-      <Name>SimpleLogger</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
